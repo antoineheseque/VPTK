@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2570479517914224356}
   - component: {fileID: 2570479517914224357}
+  - component: {fileID: 2570479517914224280}
   - component: {fileID: 2570479517914224282}
   - component: {fileID: 2570479517914224283}
-  - component: {fileID: 2570479517914224280}
   m_Layer: 0
   m_Name: GreenScreen
   m_TagString: Untagged
@@ -42,6 +42,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2570479517914224281}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2570479517914224280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2570479517914224281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d37de3fe72cf948afdc8aca3615903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraName: "Microsoft\xAE LifeCam Studio(TM)"
 --- !u!23 &2570479517914224282
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -95,19 +108,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2570479517914224280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2570479517914224281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90d37de3fe72cf948afdc8aca3615903, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraName: "Microsoft\xAE LifeCam Studio(TM)"
-  width: 1280
-  height: 720
-  fps: 50
