@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3794546058964827607}
   - component: {fileID: 3810563827521443213}
   - component: {fileID: 3871159859728557539}
+  - component: {fileID: 4377777505400720653}
   - component: {fileID: 3793959930114375149}
   m_Layer: 0
   m_Name: Camera
@@ -84,6 +85,18 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3793534972802566601}
   m_Enabled: 1
+--- !u!114 &4377777505400720653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3793534972802566601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30a2316e98e1dc4b97e432a1301f85c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3793959930114375149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -384,7 +397,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3793959930114447715}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7218af538e4c00419b9a9b1927cfdec, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b92b4a662bdffb4c8724809831ece85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultMaterial: {fileID: 2100000, guid: c13a8c82ed41f19468c8c70b226d2c17, type: 2}
@@ -466,7 +479,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3793959930114478917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7218af538e4c00419b9a9b1927cfdec, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b92b4a662bdffb4c8724809831ece85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultMaterial: {fileID: 2100000, guid: c13a8c82ed41f19468c8c70b226d2c17, type: 2}
@@ -484,7 +497,7 @@ GameObject:
   - component: {fileID: 3793959930117745431}
   - component: {fileID: 3793959930107998839}
   m_Layer: 0
-  m_Name: VPCameraRig
+  m_Name: '[VPCameraRig]'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -571,16 +584,16 @@ MonoBehaviour:
   drawWireframeWhenSelectedOnly: 0
   drawInGame: 1
   size: 0
-  color: {r: 0, g: 1, b: 1, a: 1}
+  color: {r: 0, g: 0.5773268, b: 1, a: 1}
   vertices:
-  - {x: 1.3, y: 0.01, z: -1.1999998}
-  - {x: -1.2999997, y: 0.01, z: -1.1999998}
-  - {x: -1.2999995, y: 0.01, z: 1.2}
-  - {x: 1.3000001, y: 0.01, z: 1.1999999}
-  - {x: 1.4499999, y: 0.01, z: -1.3499998}
-  - {x: -1.4499997, y: 0.01, z: -1.3499998}
-  - {x: -1.4499995, y: 0.01, z: 1.35}
-  - {x: 1.45, y: 0.01, z: 1.3499999}
+  - {x: 0.60375, y: 0.01, z: -0.58875}
+  - {x: -0.60375, y: 0.01, z: -0.58875}
+  - {x: -0.60375, y: 0.01, z: 0.58875}
+  - {x: 0.60375, y: 0.01, z: 0.58875}
+  - {x: 0.75374997, y: 0.01, z: -0.73875}
+  - {x: -0.75374997, y: 0.01, z: -0.73875}
+  - {x: -0.75374997, y: 0.01, z: 0.73875}
+  - {x: 0.75374997, y: 0.01, z: 0.73875}
 --- !u!1 &3793959930114491145
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,7 +657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: -1
   modelOverride: 
-  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
   verbose: 0
   createComponents: 1
   updateDynamically: 1
@@ -711,7 +724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: -1
   modelOverride: 
-  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
   verbose: 0
   createComponents: 1
   updateDynamically: 1
@@ -1066,10 +1079,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d37de3fe72cf948afdc8aca3615903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraName: "Microsoft\xAE LifeCam Studio(TM)"
-  width: 1280
-  height: 720
-  fps: 50
+  selectedWebcam: 
 --- !u!1 &3793959930420351768
 GameObject:
   m_ObjectHideFlags: 0

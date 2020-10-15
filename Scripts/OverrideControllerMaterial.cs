@@ -7,7 +7,7 @@ using Valve.VR;
 ///
 /// NOTE: This is only compatible with the default HTC vive controllers (see UpdateControllerMaterial() below).
 ///
-/// Modified by Patrick Nelson / chunk_split (pat@catchyour.com) from original "OverrideControllerTexture" class
+/// Modified by Antoine HESEQUE and Patrick Nelson / chunk_split (pat@catchyour.com) from original "OverrideControllerTexture" class
 /// by Mr_FJ (from https://steamcommunity.com/app/358720/discussions/0/357287304420388604/) to allow override of full
 /// material instead of just textures and also utilize the latest SteamVR_Events model.
 ///
@@ -45,18 +45,13 @@ public class OverrideControllerMaterial : MonoBehaviour
             // "onepointfive" texture. Prevents you from having to manually flip/rotate the texture yourself in PhotoShop. 
             newMaterial.mainTextureScale = new Vector2(1, -1);
         }
-        
-        modelTransform.Find("body").GetComponent<MeshRenderer>().material = newMaterial;
-        modelTransform.Find("button").GetComponent<MeshRenderer>().material = newMaterial;
-        modelTransform.Find("led").GetComponent<MeshRenderer>().material = newMaterial;
-        modelTransform.Find("lgrip").GetComponent<MeshRenderer>().material = newMaterial;
-        modelTransform.Find("rgrip").GetComponent<MeshRenderer>().material = newMaterial;
-        modelTransform.Find("scroll_wheel").GetComponent<MeshRenderer>().material = newMaterial;
-        modelTransform.Find("sys_button").GetComponent<MeshRenderer>().material = newMaterial;
-        modelTransform.Find("trackpad").GetComponent<MeshRenderer>().material = newMaterial;
-        modelTransform.Find("trackpad_scroll_cut").GetComponent<MeshRenderer>().material = newMaterial;
-        modelTransform.Find("trackpad_touch").GetComponent<MeshRenderer>().material = newMaterial;
-        modelTransform.Find("trigger").GetComponent<MeshRenderer>().material = newMaterial;
+
+        for (int i = 0; i < modelTransform.childCount; i++)
+        {
+            Transform tr = modelTransform.GetChild(i);
+            if(tr.GetComponent<MeshRenderer>())
+                tr.GetComponent<MeshRenderer>().material = newMaterial;
+        }
     }
  
     /// <summary>

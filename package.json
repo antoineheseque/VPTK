@@ -1,0 +1,18 @@
+{
+  "name": "tech.antoineh.vptk",
+  "displayName": "Virtual Production Toolkit",
+  "description": "This plugin provide tools to be used for virtual production sets.",
+  "version": "1.0.0",
+  "unity": "2019.4",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoineheseque/VPTK.git#upm"
+  },
+  "author": "VPTKTeam <antoine.heseque@isen.yncrea.fr> (https://github.com/antoineheseque/)",
+  "dependencies": {},
+  "keywords": [
+    "vp",
+    "virtual production",
+    "toolkit"
+  ]
+}
