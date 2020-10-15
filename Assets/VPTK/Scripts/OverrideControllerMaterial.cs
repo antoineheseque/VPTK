@@ -13,54 +13,60 @@ using Valve.VR;
 ///
 /// See also: https://forum.unity.com/threads/changing-the-htc-vive-controller-model-with-a-custom-hand-model.395107/
 /// </summary>
-public class OverrideControllerMaterial : MonoBehaviour
+namespace VPTK.Tools
 {
-    #region Public variables
-    [Header("Variables")]
-    public Material defaultMaterial;
-    public bool fixTiling = true; // Check this to correct the texture orientation.
-    #endregion
-    
-    void OnEnable ()
+    public class OverrideControllerMaterial : MonoBehaviour
     {
-        //Subscribe to the event that is called by SteamVR_RenderModel, when the controller and it's associated material has been loaded completely.
-        SteamVR_Events.RenderModelLoaded.Listen(OnControllerLoaded);
-    }
-    void OnDisable ()
-    {
-        //Unsubscribe to the event if this object is disabled.
-        SteamVR_Events.RenderModelLoaded.Remove(OnControllerLoaded);
-    }
- 
-    /// <summary>
-    /// Override the material of each of the parts, with your custom material.
-    /// </summary>
-    /// <param name="newMaterial">Override material</param>
-    /// <param name="modelTransform">Transform of the gameobject, which has the SteamVR_RenderModel component.</param>
-    /// <param name="modelTransform">Correct the texture orientation (if it looks offset incorrectly)</param>
-    public void UpdateControllerMaterial(Material newMaterial, Transform modelTransform, bool fixTiling = true)
-    {
-        if (fixTiling) {
-            // Internally aligns the textures so that they wrap properly around our models the same as the original
-            // "onepointfive" texture. Prevents you from having to manually flip/rotate the texture yourself in PhotoShop. 
-            newMaterial.mainTextureScale = new Vector2(1, -1);
+        #region Public variables
+
+        [Header("Variables")] public Material defaultMaterial;
+        public bool fixTiling = true; // Check this to correct the texture orientation.
+
+        #endregion
+
+        void OnEnable()
+        {
+            //Subscribe to the event that is called by SteamVR_RenderModel, when the controller and it's associated material has been loaded completely.
+            SteamVR_Events.RenderModelLoaded.Listen(OnControllerLoaded);
         }
 
-        for (int i = 0; i < modelTransform.childCount; i++)
+        void OnDisable()
         {
-            Transform tr = modelTransform.GetChild(i);
-            if(tr.GetComponent<MeshRenderer>())
-                tr.GetComponent<MeshRenderer>().material = newMaterial;
+            //Unsubscribe to the event if this object is disabled.
+            SteamVR_Events.RenderModelLoaded.Remove(OnControllerLoaded);
         }
-    }
- 
-    /// <summary>
-    /// Call this method, when the "RenderModelLoaded" event is triggered.
-    /// </summary>
-    /// <param name="controllerRenderModel"></param>
-    /// <param name="success"></param>
-    void OnControllerLoaded(SteamVR_RenderModel controllerRenderModel, bool success)
-    {
-        UpdateControllerMaterial(defaultMaterial, controllerRenderModel.gameObject.transform, fixTiling);
+
+        /// <summary>
+        /// Override the material of each of the parts, with your custom material.
+        /// </summary>
+        /// <param name="newMaterial">Override material</param>
+        /// <param name="modelTransform">Transform of the gameobject, which has the SteamVR_RenderModel component.</param>
+        /// <param name="modelTransform">Correct the texture orientation (if it looks offset incorrectly)</param>
+        public void UpdateControllerMaterial(Material newMaterial, Transform modelTransform, bool fixTiling = true)
+        {
+            if (fixTiling)
+            {
+                // Internally aligns the textures so that they wrap properly around our models the same as the original
+                // "onepointfive" texture. Prevents you from having to manually flip/rotate the texture yourself in PhotoShop. 
+                newMaterial.mainTextureScale = new Vector2(1, -1);
+            }
+
+            for (int i = 0; i < modelTransform.childCount; i++)
+            {
+                Transform tr = modelTransform.GetChild(i);
+                if (tr.GetComponent<MeshRenderer>())
+                    tr.GetComponent<MeshRenderer>().material = newMaterial;
+            }
+        }
+
+        /// <summary>
+        /// Call this method, when the "RenderModelLoaded" event is triggered.
+        /// </summary>
+        /// <param name="controllerRenderModel"></param>
+        /// <param name="success"></param>
+        void OnControllerLoaded(SteamVR_RenderModel controllerRenderModel, bool success)
+        {
+            UpdateControllerMaterial(defaultMaterial, controllerRenderModel.gameObject.transform, fixTiling);
+        }
     }
 }

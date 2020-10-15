@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.unity.aovrecorder": "0.1.1-preview.2",
     "com.unity.ide.rider": "1.1.4",
     "com.unity.render-pipelines.high-definition": "7.5.1",
     "com.unity.test-framework": "1.1.16",

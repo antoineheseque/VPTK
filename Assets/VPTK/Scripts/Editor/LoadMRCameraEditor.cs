@@ -1,35 +1,39 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using VPTK.Tools;
 
-/// <summary>
-/// Show a dropdown with all the possible cameras in the LoadMRCamera script hierarchy.
-/// </summary>
-[CustomEditor(typeof(LoadMRCamera))]
-public class LoadMRCameraEditor : Editor
+namespace VPTK.Editor
 {
-    private int selected = 0;
-    private readonly List<string> options = new List<string>();
-
-    private SerializedProperty selectedWebcam;
-    
-    private void OnEnable()
+    /// <summary>
+    /// Show a dropdown with all the possible cameras in the LoadMRCamera script hierarchy.
+    /// </summary>
+    [CustomEditor(typeof(LoadMRCamera))]
+    public class LoadMRCameraEditor : UnityEditor.Editor
     {
-        options.Clear();
-        foreach (var cam in WebCamTexture.devices)
+        private int selected = 0;
+        private readonly List<string> options = new List<string>();
+
+        private SerializedProperty selectedWebcam;
+
+        private void OnEnable()
         {
-            options.Add(cam.name);
+            options.Clear();
+            foreach (var cam in WebCamTexture.devices)
+            {
+                options.Add(cam.name);
+            }
+
+            selectedWebcam = serializedObject.FindProperty("selectedWebcam");
+            selected = options.FindIndex(a => a == selectedWebcam.stringValue);
         }
 
-        selectedWebcam = serializedObject.FindProperty("selectedWebcam");
-        selected = options.FindIndex(a => a == selectedWebcam.stringValue);
-    }
+        public override void OnInspectorGUI()
+        {
+            selected = EditorGUILayout.Popup("WEBCAM", selected, options.ToArray());
+            selectedWebcam.stringValue = options[selected];
 
-    public override void OnInspectorGUI()
-    {
-        selected = EditorGUILayout.Popup("WEBCAM", selected, options.ToArray());
-        selectedWebcam.stringValue = options[selected];
-        
-        serializedObject.ApplyModifiedProperties();
+            serializedObject.ApplyModifiedProperties();
+        }
     }
 }
