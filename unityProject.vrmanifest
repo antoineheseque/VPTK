@@ -2,13 +2,13 @@
   "source": "Unity",
   "applications": [
     {
-      "app_key": "application.generated.unity.virtualproduction.exe",
+      "app_key": "application.generated.unity.vptk.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\VirtualProductionToolKit\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Projects\\Unity3D\\VPTK\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
-          "name": "VirtualProduction [Testing]"
+          "name": "VPTK [Testing]"
         }
       }
     }

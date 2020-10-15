@@ -9,5 +9,5 @@ EditorBuildSettings:
     path: Assets/VPTK/Scenes/MainScene.unity
     guid: cbfe36cfddfde964d9dfce63a355d5dd
   m_configObjects:
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 294c43de1c0effb4e9a5c369f5bc54b6,
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a7062b52fc13a65429b2bfb8a3920ff9,
       type: 2}

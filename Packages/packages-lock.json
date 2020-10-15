@@ -1,21 +1,5 @@
 {
   "dependencies": {
-    "com.unity.aovrecorder": {
-      "version": "0.1.1-preview.2",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.recorder": "2.1.0-preview.1"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.collab-proxy": {
-      "version": "1.2.16",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
     "com.unity.ext.nunit": {
       "version": "1.0.0",
       "depth": 1,
@@ -29,22 +13,6 @@
       "source": "registry",
       "dependencies": {
         "com.unity.test-framework": "1.1.1"
-      },
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.ide.vscode": {
-      "version": "1.2.1",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.recorder": {
-      "version": "2.1.0-preview.1",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.timeline": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -70,12 +38,13 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.render-pipelines.high-definition-config": {
-      "version": "file:../LocalPackages/com.unity.render-pipelines.high-definition-config",
-      "depth": 0,
-      "source": "local",
+      "version": "7.5.1",
+      "depth": 1,
+      "source": "registry",
       "dependencies": {
-        "com.unity.render-pipelines.core": "7.3.1"
-      }
+        "com.unity.render-pipelines.core": "7.5.1"
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.shadergraph": {
       "version": "7.5.1",
