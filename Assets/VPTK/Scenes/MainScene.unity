@@ -122,40 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!21 &137765446
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _AlphaTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - PixelSnap: 0
-    - _EnableExternalAlpha: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &237234975
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,6 +197,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &325054542
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _EnableExternalAlpha: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &942419404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -241,7 +241,7 @@ PrefabInstance:
     - target: {fileID: 2570479517914224280, guid: 4196c2675e948e141816ed5bf0410923,
         type: 3}
       propertyPath: selectedWebcam
-      value: OBS Virtual Camera
+      value: USB Video
       objectReference: {fileID: 0}
     - target: {fileID: 2570479517914224281, guid: 4196c2675e948e141816ed5bf0410923,
         type: 3}
@@ -286,7 +286,7 @@ PrefabInstance:
     - target: {fileID: 2570479517914224356, guid: 4196c2675e948e141816ed5bf0410923,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2570479517914224356, guid: 4196c2675e948e141816ed5bf0410923,
         type: 3}
@@ -305,7 +305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4196c2675e948e141816ed5bf0410923, type: 3}
---- !u!43 &1650034067
+--- !u!43 &1628697518
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -322,8 +322,8 @@ Mesh:
     firstVertex: 0
     vertexCount: 8
     localAABB:
-      m_Center: {x: 0, y: 0.01, z: 0}
-      m_Extent: {x: 0.75374997, y: 0, z: 0.73875}
+      m_Center: {x: 0.00000017881393, y: 0.01, z: 0.00000011920929}
+      m_Extent: {x: 1.4499998, y: 0, z: 1.3499999}
   m_Shapes:
     vertices: []
     shapes: []
@@ -402,7 +402,7 @@ Mesh:
       format: 0
       dimension: 0
     m_DataSize: 288
-    _typelessdata: 5c8f1a3f0ad7233c52b816bf00000000b0cb133f0000803f0000803f00000000000000005c8f1abf0ad7233c52b816bf00000000b0cb133f0000803f0000803f0000803f000000005c8f1abf0ad7233c52b8163f00000000b0cb133f0000803f0000803f00000000000000005c8f1a3f0ad7233c52b8163f00000000b0cb133f0000803f0000803f0000803f00000000c2f5403f0ad7233cb81e3dbf00000000b0cb133f0000803f00000000000000000000803fc2f540bf0ad7233cb81e3dbf00000000b0cb133f0000803f000000000000803f0000803fc2f540bf0ad7233cb81e3d3f00000000b0cb133f0000803f00000000000000000000803fc2f5403f0ad7233cb81e3d3f00000000b0cb133f0000803f000000000000803f0000803f
+    _typelessdata: 6666a63f0ad7233c989999bf00000000b0cb133f0000803f0000803f00000000000000006466a6bf0ad7233c989999bf00000000b0cb133f0000803f0000803f0000803f000000006266a6bf0ad7233c9a99993f00000000b0cb133f0000803f0000803f00000000000000006766a63f0ad7233c9999993f00000000b0cb133f0000803f0000803f0000803f000000009999b93f0ad7233ccbccacbf00000000b0cb133f0000803f00000000000000000000803f9799b9bf0ad7233ccbccacbf00000000b0cb133f0000803f000000000000803f0000803f9599b9bf0ad7233ccdccac3f00000000b0cb133f0000803f00000000000000000000803f9a99b93f0ad7233cccccac3f00000000b0cb133f0000803f000000000000803f0000803f
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -456,8 +456,8 @@ Mesh:
       m_BitSize: 0
     m_UVInfo: 0
   m_LocalAABB:
-    m_Center: {x: 0, y: 0.01, z: 0}
-    m_Extent: {x: 0.75374997, y: 0, z: 0.73875}
+    m_Center: {x: 0.00000017881393, y: 0.01, z: 0.00000011920929}
+    m_Extent: {x: 1.4499998, y: 0, z: 1.3499999}
   m_MeshUsageFlags: 0
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
@@ -539,12 +539,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 137765446}
+      objectReference: {fileID: 325054542}
     - target: {fileID: 3793959930117745431, guid: 8bcde21e344bd6e4dac451c1708275e5,
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1650034067}
+      objectReference: {fileID: 1628697518}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bcde21e344bd6e4dac451c1708275e5, type: 3}
 --- !u!1 &1752272653
@@ -669,7 +669,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &304346282084811071
 Transform:

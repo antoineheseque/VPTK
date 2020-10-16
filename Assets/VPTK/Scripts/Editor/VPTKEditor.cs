@@ -28,20 +28,8 @@ namespace VPTK.Editor
             Debug.Log("[VPTK] Layout saved.");
         }
 
-        [MenuItem("VPTK/Virtual Production Tools %#V", false, 20)]
-        private static void OpenToolsWindow()
-        {
-            EditorWindow.GetWindow<VPToolsWindow>("Virtual Production Tools");
-        }
-
         [MenuItem("VPTK/Camera Preview %#X", false, 21)]
         private static void OpenPreviewWindow()
-        {
-            Debug.Log("opening window.");
-        }
-        
-        [MenuItem("VPTK/Gallery %#G", false, 22)]
-        private static void OpenGalleryWindow()
         {
             Debug.Log("opening window.");
         }
