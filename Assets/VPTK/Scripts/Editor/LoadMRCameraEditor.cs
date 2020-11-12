@@ -11,7 +11,7 @@ namespace VPTK.Editor
     [CustomEditor(typeof(LoadMRCamera))]
     public class LoadMRCameraEditor : UnityEditor.Editor
     {
-        private int selected = 0;
+        private int selectedWebcamIndex = 0;
         private readonly List<string> options = new List<string>();
 
         private SerializedProperty selectedWebcam;
@@ -23,7 +23,7 @@ namespace VPTK.Editor
             {
                 options.Add(cam.name);
             }
-
+            
             selectedWebcam = serializedObject.FindProperty("selectedWebcam");
         }
 
@@ -31,16 +31,15 @@ namespace VPTK.Editor
         {
             EditorGUI.BeginChangeCheck();
             
-            int sel = selected;
-            sel = EditorGUILayout.Popup("WEBCAM", selected, options.ToArray());
+            int selected = EditorGUILayout.Popup("WEBCAM", selectedWebcamIndex, options.ToArray());
 
             if (!EditorGUI.EndChangeCheck()) return;
 
             // If selected webcam changed
-            if (sel != selected)
+            if (selected != selectedWebcamIndex)
             {
-                selected = sel;
-                selectedWebcam.stringValue = options[selected];
+                selectedWebcamIndex = selected;
+                selectedWebcam.stringValue = options[selectedWebcamIndex];
                 serializedObject.ApplyModifiedProperties();
             }
             

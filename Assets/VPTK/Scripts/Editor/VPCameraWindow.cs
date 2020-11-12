@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
@@ -59,7 +57,7 @@ namespace VPTK.Editor.Window
                     (int)RenderTextureFormat.ARGB32);
         }
 
-        void OnGUI()
+        private void OnGUI()
         {
             EditorGUI.BeginChangeCheck();
             // Draw camera

@@ -27,11 +27,5 @@ namespace VPTK.Editor
             LayoutUtility.SaveLayout("Assets/VPTK/Layout/VPLayout.wlt");
             Debug.Log("[VPTK] Layout saved.");
         }
-
-        
-        private static void OpenPreviewWindow()
-        {
-            Debug.Log("opening window.");
-        }
     }
 }
