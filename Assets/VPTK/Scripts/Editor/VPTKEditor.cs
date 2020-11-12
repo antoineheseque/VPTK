@@ -28,7 +28,7 @@ namespace VPTK.Editor
             Debug.Log("[VPTK] Layout saved.");
         }
 
-        [MenuItem("VPTK/Camera Preview %#X", false, 21)]
+        
         private static void OpenPreviewWindow()
         {
             Debug.Log("opening window.");

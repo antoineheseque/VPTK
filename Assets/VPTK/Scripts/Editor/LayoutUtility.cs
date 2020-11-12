@@ -21,6 +21,7 @@ namespace VPTK.Editor.Utility
             MethodInfo save = null;
             MethodInfo load = null;
 
+            // ReSharper disable once InvertIf
             if (layout != null)
             {
                 load = layout.GetMethod("LoadWindowLayout",

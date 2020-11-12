@@ -25,15 +25,26 @@ namespace VPTK.Editor
             }
 
             selectedWebcam = serializedObject.FindProperty("selectedWebcam");
-            selected = options.FindIndex(a => a == selectedWebcam.stringValue);
         }
 
         public override void OnInspectorGUI()
         {
-            selected = EditorGUILayout.Popup("WEBCAM", selected, options.ToArray());
-            selectedWebcam.stringValue = options[selected];
+            EditorGUI.BeginChangeCheck();
+            
+            int sel = selected;
+            sel = EditorGUILayout.Popup("WEBCAM", selected, options.ToArray());
 
-            serializedObject.ApplyModifiedProperties();
+            if (!EditorGUI.EndChangeCheck()) return;
+
+            // If selected webcam changed
+            if (sel != selected)
+            {
+                selected = sel;
+                selectedWebcam.stringValue = options[selected];
+                serializedObject.ApplyModifiedProperties();
+            }
+            
+            Debug.Log(("Soooomething changed here in LoadMRCameraEditor"));
         }
     }
 }

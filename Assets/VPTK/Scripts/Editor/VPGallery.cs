@@ -10,7 +10,5 @@ namespace VPTK.Editor.Window
         {
             Debug.Log("opening window.");
         }
-        
-        
     }
 }
