@@ -81,11 +81,13 @@ namespace VPTK.Editor.Window
                 else
                     EditorGUILayout.LabelField("No camera selected", EditorStyles.toolbarPopup, GUILayout.Width(150));
 
-                EditorGUILayout.Space();
-                
                 // Show sync button to sync cameras
                 if (GUILayout.Button("Scan cameras", EditorStyles.toolbarButton))
                     ScanCameras();
+                
+                EditorGUILayout.Space();
+                EditorGUILayout.LabelField("Aspect Ratio");
+                //EditorGUILayout.FloatField()
                 
                 GUILayout.FlexibleSpace();
             }

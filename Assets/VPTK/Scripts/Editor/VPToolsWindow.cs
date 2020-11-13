@@ -31,5 +31,10 @@ namespace VPTK.Editor.Window
                     break;
             }
         }
+
+        private void OnHierarchyChange()
+        {
+            Repaint();
+        }
     }
 }
