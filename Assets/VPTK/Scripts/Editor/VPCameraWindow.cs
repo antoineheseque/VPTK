@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEditor;
 using UnityEngine;
@@ -63,7 +64,7 @@ namespace VPTK.Editor.Window
             // Draw camera
             if(cameras.Count > 0 && renderTexture)
                 GUI.DrawTexture(new Rect(0.0f, 0.0f, position.width, position.height), renderTexture);
-            
+            Repaint();
             // Draw Toolbar
             DrawToolbar();
         }

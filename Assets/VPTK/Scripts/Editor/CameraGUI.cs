@@ -9,6 +9,7 @@ namespace VPTK.Editor.Window
         private void CameraGUI()
         {
             //
+            GUILayout.Label(selectedCamera.name);
         }
     }
 }

@@ -134,6 +134,7 @@ namespace Valve.VR
                 transform.localPosition = poseAction[inputSource].localPosition;
                 transform.localRotation = poseAction[inputSource].localRotation;
             }
+            Debug.Log("ON ACTUALISE LA");
         }
 
         private void SteamVR_Behaviour_Pose_OnChange(SteamVR_Action_Pose fromAction, SteamVR_Input_Sources fromSource)
