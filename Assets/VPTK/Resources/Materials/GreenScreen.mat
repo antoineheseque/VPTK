@@ -138,14 +138,14 @@ Material:
     - _Background: 0.55
     - _BlendMode: 0
     - _CoatMask: 0
-    - _ColorCutoff: 0.27
-    - _ColorFeathering: 0.284
+    - _ColorCutoff: 0.115
+    - _ColorFeathering: 0.163
     - _CullMode: 2
     - _CullModeForward: 2
     - _Cutoff: 0.1
     - _DepthOffsetEnable: 0
-    - _Despill: 0.33
-    - _DespillLuminanceAdd: 0
+    - _Despill: 0.311
+    - _DespillLuminanceAdd: 0.154
     - _DetailAlbedoScale: 1
     - _DetailNormalScale: 1
     - _DetailSmoothnessScale: 1
@@ -195,7 +195,7 @@ Material:
     - _IridescenceMask: 1
     - _IridescenceThickness: 1
     - _LinkDetailsWithBase: 1
-    - _MaskFeathering: 0.284
+    - _MaskFeathering: 0
     - _MaterialID: 1
     - _Metallic: 0
     - _NormalMapSpace: 0
@@ -208,7 +208,7 @@ Material:
     - _ReceivesSSR: 1
     - _RefractionModel: 0
     - _SSRefractionProjectionModel: 0
-    - _Sharpening: 0.062
+    - _Sharpening: 0.555
     - _SmoothStrength: 0
     - _Smoothness: 0.5
     - _SmoothnessRemapMax: 1
@@ -265,11 +265,11 @@ Material:
     - _EmissiveColorLDR: {r: 0, g: 0, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}
     - _IridescenceThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
-    - _KeyColor: {r: 0.10840159, g: 0.7924528, b: 0.18394104, a: 1}
+    - _KeyColor: {r: 0, g: 0.59607846, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _ThicknessRemap: {r: 0, g: 1, b: 0, a: 0}
     - _TiltColor: {r: 1, g: 1, b: 1, a: 1}
-    - _TintColor: {r: 0.9150943, g: 0.9150943, b: 0.9150943, a: 1}
+    - _TintColor: {r: 0.9254902, g: 0.9254902, b: 0.9254902, a: 1}
     - _TransmittanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _UVDetailsMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}

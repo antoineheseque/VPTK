@@ -25,6 +25,8 @@ namespace VPTK.Editor
             }
             
             selectedWebcam = serializedObject.FindProperty("selectedWebcam");
+            selectedWebcam.stringValue = options[0];
+            serializedObject.ApplyModifiedProperties();
         }
 
         public override void OnInspectorGUI()

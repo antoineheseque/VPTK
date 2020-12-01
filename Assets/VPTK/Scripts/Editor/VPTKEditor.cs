@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using VPTK.Editor.Utility;
-using VPTK.Editor.Window;
 
 namespace VPTK.Editor
 {

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 
 namespace VPTK.Tools
@@ -27,6 +26,8 @@ namespace VPTK.Tools
                 Debug.Log($"[Camera Selector] {selectedWebcam} successfully started.");
             else
                 Debug.LogError($"[Camera Selector] {selectedWebcam} can't be started. Is this camera already used?");
+            
+            
         }
 
         /// <summary>

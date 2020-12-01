@@ -10,13 +10,17 @@ namespace VPTK.Editor.Window
     {
         private void CameraGUI()
         {
+            if (!selectedCamera) return;
+            
+            GUILayout.Label(selectedCamera.name);
+            
             GeneralSettings();
             EditorGUILayout.Space();
             PhysicalSettings();
             EditorGUILayout.Space();
             LensSettings();
         }
-        // if selectedCamera == 1 { ??
+        
         private void GeneralSettings() //general : fov, fov axis, hdr, antialiasing
         {
             GUILayout.Label("General settings", EditorStyles.toolbarDropDown);
@@ -25,7 +29,7 @@ namespace VPTK.Editor.Window
 
             // HDR
                 bool hdr = true;
-                hdr = EditorGUILayout.Toggle("enable hdr", true);
+                hdr = EditorGUILayout.Toggle("enable hdr", selectedCamera.allowHDR);
                 //if(GUILayout.Button("hdr"))
                     //this.//condition hdr à remplir
             
@@ -40,13 +44,13 @@ namespace VPTK.Editor.Window
                 EditorGUILayout.Separator();
                 
                 float foview;
-                foview = EditorGUILayout.Slider("Field Of View", 100,0,100);
+                foview = EditorGUILayout.Slider("Field Of View", selectedCamera.fieldOfView,0,179);
                 // condition fov
                 
                 EditorGUILayout.Separator();
                 
                 float fov_axis;
-                fov_axis = EditorGUILayout.SelectableLabel("Field Of View Axis", new GUILayoutOption["vertical"]);
+                //fov_axis = EditorGUILayout.SelectableLabel("Field Of View Axis", new GUILayoutOption["vertical"]);
                 // condition fov axis
 
             EditorGUI.EndChangeCheck();

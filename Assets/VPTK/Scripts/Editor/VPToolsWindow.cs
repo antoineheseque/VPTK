@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using System;
+using UnityEditor;
 using UnityEngine;
 
 namespace VPTK.Editor.Window
@@ -35,6 +36,12 @@ namespace VPTK.Editor.Window
         private void OnHierarchyChange()
         {
             Repaint();
+        }
+
+        private void OnEnable()
+        {
+            if (!selectedCamera)
+                selectedCamera = FindObjectOfType<Camera>();
         }
     }
 }

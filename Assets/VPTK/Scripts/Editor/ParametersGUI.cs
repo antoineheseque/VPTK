@@ -1,10 +1,7 @@
 ﻿using System.Linq;
 using UnityEditor;
-using UnityEditor.UIElements;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
 using VPTK.Tools;
-using LightType = UnityEngine.LightType;
 
 namespace VPTK.Editor.Window
 {
@@ -52,7 +49,15 @@ namespace VPTK.Editor.Window
                 if (FindObjectOfType<LoadMRCamera>())
                     loadMRCamera = FindObjectOfType<LoadMRCamera>();
                 else
-                    loadMRCamera = new GameObject("VPTK_GreenScreen", typeof(LoadMRCamera)).GetComponent<LoadMRCamera>();
+                {
+                    GameObject greenScreenPrefab = Resources.Load<GameObject>("Prefabs/GreenScreen");
+                    loadMRCamera = Instantiate(greenScreenPrefab)
+                        .GetComponent<LoadMRCamera>();
+                    loadMRCamera.gameObject.name = "VP_GreenScreen";
+
+                    //loadMRCamera = new GameObject("VPTK_GreenScreen", typeof(LoadMRCamera)).GetComponent<LoadMRCamera>();
+                }
+
                 mrCameraEditor = UnityEditor.Editor.CreateEditor(loadMRCamera);
             }
             else if(!greenScreen && (loadMRCamera != null || mrCameraEditor != null))
