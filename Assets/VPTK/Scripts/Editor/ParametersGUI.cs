@@ -88,15 +88,16 @@ namespace VPTK.Editor.Window
             {
                 // There is something that changed from before
                 Debug.Log((" * - * "));
+                
             }
         }
             
         private void VerifyLights()
         {
-            Light[] lights = FindObjectsOfType<Light>();
-            if (this.lights.Length == lights.Length) return;
+            Light[] currentLights = FindObjectsOfType<Light>();
+            if (currentLights.Length == 0 || lights.Length == currentLights.Length) return;
             
-            this.lights = lights;
+            lights = currentLights;
             selected = Mathf.Min(selected, lights.Length);
         }
     }
