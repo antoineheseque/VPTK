@@ -6,8 +6,8 @@ using Valve.VR;
 
 public class OverridePositionTracker : SteamVR_Behaviour_Pose
 {
-    private float lerpPosition = .7f;
-    private float lerpRotation = .2f;
+    private float lerpPosition = 1f;
+    private float lerpRotation = 1f;
     
     protected override void UpdateTransform()
     {
